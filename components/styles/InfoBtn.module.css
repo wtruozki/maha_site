@@ -1,0 +1,22 @@
+.item {
+  padding: 1em;
+  display: flex;
+  border: 1px solid #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  margin-bottom: 1em;
+  transition: background 0.2s;
+}
+
+.item img {
+  position: absolute;
+  width: 50px;
+  opacity: 0.4;
+}
+
+.item:hover {
+  background-color: #bc8b2f;
+}
