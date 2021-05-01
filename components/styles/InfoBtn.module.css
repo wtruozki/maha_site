@@ -29,10 +29,8 @@
 
 @media screen and (min-width: 960px) {
   .item {
-    width: 13vw;
+    width: 230px;
     height: 13vw;
-    max-width: 200px;
-    max-height: 200px;
   }
 
   .item img {

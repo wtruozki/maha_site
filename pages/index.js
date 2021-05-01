@@ -78,12 +78,10 @@ export default function Home({ test, whats }) {
             <div className={styles.infoContainer}>
               <InfoBtn title="Party Plan" image="bottle.png" />
               <InfoBtn title="Rental" image="rental.png" />
-              <InfoBtn title="Shop" image="shop.png" />
+              <InfoBtn title="Web Store" image="shop.png" />
               <InfoBtn title="Recruit" image="recruit.png" />
-              <InfoBtn title="Party Plan" image="bottle.png" />
-              <InfoBtn title="Rental" image="rental.png" />
-              <InfoBtn title="Shop" image="shop.png" />
-              <InfoBtn title="Recruit" image="recruit.png" />
+              <InfoBtn title="Mail Magazine" image="mail.png" />
+              <InfoBtn title="Members Card" image="members.png" />
             </div>
           </div>
         </HomeSection>

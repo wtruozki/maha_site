@@ -26,11 +26,12 @@
   justify-content: space-around;
 }
 
-.aside li {
+.aside ul li {
   display: flex;
   justify-content: center;
   width: 100%;
   transition: background 0.3s;
+  padding: 0.5em;
 }
 .aside li:hover {
   background-color: #444;

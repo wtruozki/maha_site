@@ -13,8 +13,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  z-index: 100;
+  position: sticky;
+  z-index: 600;
   width: 100%;
   top: 0;
 }
