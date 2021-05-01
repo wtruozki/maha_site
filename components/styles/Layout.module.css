@@ -72,12 +72,14 @@
 .sns {
   display: flex;
   width: 320px;
+
   justify-content: space-around;
   margin: 10px 0 20px;
 }
 
 .sns img {
   width: 30px;
+  hegiht: 30px;
 }
 
 @media screen and (min-width: 960px) {
