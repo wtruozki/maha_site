@@ -38,9 +38,9 @@
 
 .top img {
   position: absolute;
-  top: 180px;
+  top: 160px;
   bottom: 0;
-  width: 380px;
+  width: 320px;
   z-index: 500;
 }
 .video {
