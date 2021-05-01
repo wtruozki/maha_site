@@ -29,9 +29,24 @@
   font-family: YuMincho, "Yu Mincho", serif;
 }
 
-.topImage {
-  width: 100%;
-  margin-top: 40px;
+.top {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  position: relative;
+}
+
+.top img {
+  position: absolute;
+  top: 180px;
+  bottom: 0;
+  width: 380px;
+  z-index: 500;
+}
+.video {
+  height: 80vh;
+  margin-bottom: 50px;
+  filter: brightness(30%);
 }
 
 @media screen and (min-width: 500px) {
@@ -40,6 +55,21 @@
 }
 
 @media screen and (min-width: 960px) {
+  .top {
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .top img {
+    top: 300px;
+  }
+
+  .video {
+    height: inherit;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
   .container {
     width: 60vw;
   }

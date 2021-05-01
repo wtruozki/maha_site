@@ -22,8 +22,19 @@ const images = [
 export default function Home({ test, whats }) {
   return (
     <Layout title="マハラジャ六本木-六本木のクラブディスコ">
+      <div className={styles.top}>
+        <img src="./maharaja.png" alt="ロゴ" />
+
+        <video
+          className={styles.video}
+          src="./testsq.mp4"
+          muted
+          autoPlay
+          loop
+          playsInline
+        ></video>
+      </div>
       <main className={styles.container}>
-        <img src="home2.png" className={styles.topImage} />
         <HomeSection heading="PICK UP">
           <Carousel images={images} />
         </HomeSection>
