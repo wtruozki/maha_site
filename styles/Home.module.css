@@ -29,7 +29,7 @@
 .top {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+
   position: relative;
 }
 
@@ -44,11 +44,6 @@
   height: 80vh;
   margin-bottom: 50px;
   filter: brightness(30%);
-}
-
-@media screen and (min-width: 500px) {
-  .infoContainer {
-  }
 }
 
 @media screen and (min-width: 960px) {
