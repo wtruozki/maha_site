@@ -34,3 +34,9 @@
   width: 100px;
   margin: 1em 1em 0 0;
 }
+
+.viewAll {
+  text-align: end;
+  color: #999;
+  margin-top: 2em;
+}

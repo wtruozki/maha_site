@@ -1,0 +1,115 @@
+.container {
+  background: rgba(2, 2, 2, 0.7);
+  filter: drop-shadow(10px 10px 10px rgb(120, 119, 119));
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.logo {
+  display: none;
+}
+.logoWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.aside {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside ul {
+  display: flex;
+  font-size: 1.2em;
+  justify-content: space-around;
+}
+
+.aside li {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  transition: background 0.3s;
+}
+.aside li:hover {
+  background-color: #444;
+}
+.aside li:hover .tagText {
+  color: #b8892f;
+}
+
+.footer {
+  flex-direction: column;
+  justify-content: flex-end;
+  border-top: 1px solid #333;
+  color: #888;
+  align-items: center;
+  font-size: 0.8em;
+  display: none;
+  padding-top: 30px;
+}
+.footerContents {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  margin-bottom: 2em;
+}
+
+.tag {
+  width: 38px;
+  opacity: 0.6;
+  padding: 3px;
+}
+
+.tagText {
+  display: none;
+  font-weight: bold;
+  font-family: YuMincho, "Yu Mincho", serif;
+  transition: color 0.3s ease-in;
+}
+
+.sns {
+  display: flex;
+  width: 320px;
+  justify-content: space-around;
+  margin: 10px 0 20px;
+}
+.sns img {
+  width: 30px;
+}
+@media screen and (min-width: 960px) {
+  .container {
+    top: 0;
+    bottom: 0;
+    width: 30vw;
+    right: 0;
+  }
+
+  .footer {
+    display: flex;
+  }
+
+  .aside ul {
+    flex-direction: column;
+    padding-bottom: 30px;
+    margin-bottom: 10px;
+
+    align-items: center;
+  }
+
+  .logo {
+    padding: 50px;
+    margin: 0 auto;
+
+    display: block;
+  }
+
+  .tag {
+    display: none;
+  }
+
+  .tagText {
+    display: block;
+  }
+}

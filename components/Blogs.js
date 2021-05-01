@@ -8,13 +8,20 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 
 const Blogs = ({ blog }) => {
-  console.log(blog.newContent);
-  const date = dayjs.utc(blog.updatedAt).tz("Asia/Tokyo").format("YYYY-MM-DD");
+  const date = dayjs
+    .utc(blog.publishedAt)
+    .tz("Asia/Tokyo")
+    .format("YYYY-MM-DD");
   const newContent = blog.newContent ? "New" : "";
 
   return (
     <article>
       <ul className={styles.lists}>
+        <div className={styles.viewAll}>
+          <Link href="/">
+            <a>全て表示する</a>
+          </Link>
+        </div>
         {blog.map((blog) => (
           <li className={styles.list} key={blog.id}>
             <time>{date}</time>

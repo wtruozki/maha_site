@@ -1,0 +1,17 @@
+.container {
+  margin: 0 auto;
+}
+
+.item {
+  width: 100%;
+  margin: 0px auto 30px;
+}
+
+.slide {
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: transform 0.3s;
+}
+.active {
+  opacity: 1;
+}

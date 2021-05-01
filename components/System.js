@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./styles/Fee.module.css";
+import styles from "./styles/System.module.css";
 
 const Fee = () => {
   return (
@@ -7,14 +7,30 @@ const Fee = () => {
       <div className={styles.feeFlex}>
         <div className={styles.fee}>
           <p></p>
-          <p>Happy Hour</p>
-          <p>正規料金</p>
           <p>Men</p>
           <p>Lady</p>
-          <p>¥2,500-</p>
-          <p>¥3,500-</p>
-          <p>¥1,500-</p>
-          <p>¥2,500-</p>
+          <p>Happy Hour</p>
+          <p>正規料金</p>
+          <p>
+            ¥2,500-
+            <br />
+            <small>(4ticket)</small>
+          </p>
+          <p>
+            ¥1,500-
+            <br />
+            <small>(2ticket)</small>
+          </p>
+          <p>
+            ¥3,500-
+            <br />
+            <small>(4ticket)</small>
+          </p>
+          <p>
+            ¥2,500-
+            <br />
+            <small>(2ticket)</small>
+          </p>
         </div>
       </div>
       <div className={styles.text}>

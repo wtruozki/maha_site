@@ -1,14 +1,23 @@
-.fee_flex {
+.container {
+  padding: 50px 0;
+  background-image: url("../../public/fee.png");
+  background-size: cover;
+  background-position: centar;
+}
+.feeFlex {
   display: flex;
   flex-direction: column;
-  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .fee {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 120px 110px 110px;
+  grid-template-columns: 100px 100px 100px;
   z-index: 1;
+  font-size: 0.7em;
+  font-weight: bold;
 }
 
 .fee p {
@@ -27,21 +36,21 @@
   grid-column: 2/3;
   font-size: 1em;
   /* background-color: rgb(239, 187, 0); */
+  background-color: rgb(22, 87, 178);
 }
 .fee p:nth-of-type(3) {
   grid-row: 1/2;
   grid-column: 3/4;
   font-size: 1em;
+  background-color: rgb(239, 66, 242);
 }
 .fee p:nth-of-type(4) {
   grid-row: 2/3;
   grid-column: 1/2;
-  background-color: rgb(22, 87, 178);
 }
 .fee p:nth-of-type(5) {
   grid-row: 3/4;
   grid-column: 1/2;
-  background-color: rgb(239, 66, 242);
 }
 .fee p:nth-of-type(6) {
   grid-row: 2/3;
@@ -71,4 +80,15 @@
 
 .text a:hover {
   color: #bc8b2f;
+}
+
+@media screen and (min-width: 960px) {
+  .fee {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 200px 200px 200px;
+
+    font-size: 1em;
+    font-weight: bold;
+  }
 }

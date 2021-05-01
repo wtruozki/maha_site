@@ -5,18 +5,28 @@ import HomeSection from "../components/HomeSection";
 import Link from "next/link";
 
 import styles from "../styles/Home.module.css";
-import Fee from "../components/Fee";
+import Fee from "../components/System";
 import Layout from "../components/Layout";
 import InfoBtn from "../components/InfoBtn";
+import Carousel from "../components/Carousel";
+
+const images = [
+  "./home1.jpeg",
+  "./home2.jpeg",
+  "./home3.jpeg",
+  "./home1.jpeg",
+  "./home2.jpeg",
+  "./home3.jpeg",
+];
 
 export default function Home({ test, whats }) {
   return (
-    <Layout>
+    <Layout title="マハラジャ六本木-六本木のクラブディスコ">
       <main className={styles.container}>
-        <div className={styles.image}>
-          <img src="/home2.png" />
-        </div>
-        <HomeSection heading="PICK UP"></HomeSection>
+        <img src="home2.png" className={styles.topImage} />
+        <HomeSection heading="PICK UP">
+          <Carousel images={images} />
+        </HomeSection>
         <HomeSection heading="WHAT'S NEW">
           <Blogs blog={whats}></Blogs>
         </HomeSection>
@@ -25,7 +35,7 @@ export default function Home({ test, whats }) {
           <Blogs blog={test}></Blogs>
         </HomeSection>
 
-        <HomeSection heading="ENTRANCE FEE">
+        <HomeSection heading="SYSTEM">
           <Fee />
         </HomeSection>
         <HomeSection heading="CONCEPT">

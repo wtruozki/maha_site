@@ -3,14 +3,13 @@
   display: flex;
   border: 1px solid #fff;
   position: relative;
-  display: flex;
   align-items: center;
   justify-content: center;
-  width: 180px;
-  margin-bottom: 1em;
-  transition: background 0.2s;
+  margin-bottom: 3em;
+  transition: background 0.2s ease-in;
+  font-size: 0.8em;
+  width: 35vw;
 }
-
 .item img {
   position: absolute;
   width: 50px;
@@ -19,4 +18,27 @@
 
 .item:hover {
   background-color: #bc8b2f;
+}
+
+@media screen and (min-width: 500px) {
+  .item {
+    width: 40vw;
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .item {
+    width: 13vw;
+    height: 13vw;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .item img {
+    width: 80px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
 }
