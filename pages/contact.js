@@ -1,8 +1,10 @@
+import Layout from "../components/Layout";
+
 const contact = () => {
   return (
-    <div>
+    <Layout>
       <p>contact Page</p>
-    </div>
+    </Layout>
   );
 };
 

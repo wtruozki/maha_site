@@ -1,8 +1,10 @@
+import Layout from "../components/Layout";
+
 const access = () => {
   return (
-    <div>
+    <Layout>
       <p>access </p>
-    </div>
+    </Layout>
   );
 };
 

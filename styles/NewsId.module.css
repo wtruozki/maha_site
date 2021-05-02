@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 2em;
+}
+
+.title {
+  font-size: 1.8em;
+}
+
+.tagContainer {
+  align-self: flex-end;
+  text-align: end;
+}
+.item {
+  color: #000;
+  width: 100%;
+  background-color: #eee;
+  padding: 2em;
+  margin-bottom: 1em;
+  border-radius: 6px;
+}
+
+.item img {
+  width: 100%;
+}

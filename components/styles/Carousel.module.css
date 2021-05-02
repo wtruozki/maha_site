@@ -1,5 +1,5 @@
 .container {
-  margin: 0 auto;
+  margin: auto 0;
 }
 
 .item {
@@ -9,9 +9,10 @@
 
 .slide {
   opacity: 0.5;
-  transform: scale(0.9);
+  transform: scale(0.8);
   transition: transform 0.3s;
 }
 .active {
   opacity: 1;
+  cursor: pointer;
 }

@@ -3,6 +3,12 @@
   margin: 50px;
 }
 
+.container h2 {
+  font-family: YuMincho, "Yu Mincho", serif;
+  font-weight: lighter;
+  margin: 0;
+}
+
 .bar {
   background-color: #bc8b2f;
   width: 60px;

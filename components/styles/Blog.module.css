@@ -25,6 +25,10 @@
   color: #bc8b2f;
 }
 
+.container {
+  cursor: pointer;
+}
+
 .titleContainer {
   display: flex;
   align-items: center;
@@ -39,4 +43,8 @@
   text-align: end;
   color: #999;
   margin-top: 2em;
+}
+
+.none {
+  display: none;
 }

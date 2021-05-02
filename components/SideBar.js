@@ -1,11 +1,15 @@
 import Link from "next/link";
+import Image from "next/image";
+
 import styles from "./styles/SideBar.module.css";
 
 const SideBar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logoWrapper}>
-        <img src="logo.png" className={styles.logo} alt="ロゴ" />
+        <div className={styles.logo}>
+          <Image src="/logo.png" alt="ロゴ" width={80} height={50} />
+        </div>
       </div>
       <aside className={styles.aside}>
         <nav>
@@ -54,26 +58,28 @@ const SideBar = () => {
               </Link>
             </li>
             <li>
-              <Link href="https://reserva.be/maharajar">
-                <a>
-                  <p className={styles.tagText}>RESERVE</p>
+              <a
+                href="https://reserva.be/maharajar"
+                target="_brank"
+                rel="noopener noreferrer"
+              >
+                <p className={styles.tagText}>RESERVE</p>
 
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className={styles.tag}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
-                    />
-                  </svg>
-                </a>
-              </Link>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={styles.tag}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+                  />
+                </svg>
+              </a>
             </li>
             <li>
               <Link href="/access">
@@ -128,10 +134,54 @@ const SideBar = () => {
         <div className={styles.footer}>
           <p>公式SNS</p>
           <div className={styles.sns}>
-            <img src="f_logo_RGB-Blue_72.png" alt="ロゴ" />
-            <img src="Instagram_Glyph_Gradient_RGB.png" alt="ロゴ" />
-            <img src="LINE LOGO.png" alt="ロゴ" />
-            <img src="Logo_1_.png" alt="ロゴ" />
+            <a
+              href="https://www.facebook.com/MAHARAJA.ROPPONGI/"
+              target="_brank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/f_logo_RGB-Blue_72.png"
+                alt="facebook"
+                width="30px"
+                height="30px"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/maharaja_roppongi/"
+              target="_brank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/Instagram_Glyph_Gradient_RGB.png"
+                alt="インスタ"
+                width="30px"
+                height="30px"
+              />
+            </a>
+            <a
+              href="https://page.line.me/maharaja-roppongi"
+              target="_brank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/LINE LOGO.png"
+                alt="ライン"
+                width="30px"
+                height="30px"
+              />
+            </a>
+            <a
+              href="https://twitter.com/maharaja_rp"
+              target="_brank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/Logo_1_.png"
+                alt="twitter"
+                width="30px"
+                height="30px"
+              />
+            </a>
           </div>
           <div className={styles.footerContents}>
             <Link href="/">

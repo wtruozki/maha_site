@@ -31,7 +31,6 @@
   justify-content: center;
   width: 100%;
   transition: background 0.3s;
-  padding: 0.5em;
 }
 .aside li:hover {
   background-color: #444;
@@ -93,16 +92,12 @@
 
   .aside ul {
     flex-direction: column;
-    padding-bottom: 30px;
-    margin-bottom: 10px;
-
     align-items: center;
   }
 
   .logo {
-    padding: 50px;
+    padding: 10px;
     margin: 0 auto;
-
     display: block;
   }
 

@@ -1,11 +1,11 @@
 import Layout from "../components/Layout";
 
-const Schedule = () => {
+const Rental = () => {
   return (
     <Layout>
-      <p>Schedule</p>
+      <p>Rental</p>
     </Layout>
   );
 };
 
-export default Schedule;
+export default Rental;

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
+
 import styles from "./styles/Layout.module.css";
 import SideBar from "./SideBar";
 
@@ -21,8 +23,8 @@ const Layout = ({ children, title }) => {
           <Link href="/">
             <>
               <h1>MAHARAJA</h1>
-              <a>
-                <img className={styles.logo} src="logo1.png" alt="ロゴ" />
+              <a className={styles.logo}>
+                <Image src="/logo1.png" alt="ロゴ" width="80px" height="20px" />
               </a>
             </>
           </Link>
@@ -34,13 +36,57 @@ const Layout = ({ children, title }) => {
           {children}
 
           <footer className={styles.footer}>
-            <img src="logo.png" alt="ロゴ" />
+            <Image src="/logo.png" alt="ロゴ" width="80px" height="50px" />
             <p>公式SNS</p>
             <div className={styles.sns}>
-              <img src="f_logo_RGB-Blue_72.png" alt="ロゴ" />
-              <img src="Instagram_Glyph_Gradient_RGB.png" alt="ロゴ" />
-              <img src="LINE LOGO.png" alt="ロゴ" />
-              <img src="Logo_1_.png" alt="ロゴ" />
+              <a
+                href="https://www.facebook.com/MAHARAJA.ROPPONGI/"
+                target="_brank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/f_logo_RGB-Blue_72.png"
+                  alt="facebook"
+                  width="30px"
+                  height="30px"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/maharaja_roppongi/"
+                target="_brank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/Instagram_Glyph_Gradient_RGB.png"
+                  alt="インスタ"
+                  width="30px"
+                  height="30px"
+                />
+              </a>
+              <a
+                href="https://page.line.me/maharaja-roppongi"
+                target="_brank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/LINE LOGO.png"
+                  alt="ライン"
+                  width="30px"
+                  height="30px"
+                />
+              </a>
+              <a
+                href="https://twitter.com/maharaja_rp"
+                target="_brank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="/Logo_1_.png"
+                  alt="twitter"
+                  width="30px"
+                  height="30px"
+                />
+              </a>
             </div>
 
             <div className={styles.footerContents}>

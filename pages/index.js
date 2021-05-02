@@ -1,25 +1,15 @@
-import Head from "next/head";
-import Blogs from "../components/Blogs";
-import HomeSection from "../components/HomeSection";
-
 import Link from "next/link";
 
-import styles from "../styles/Home.module.css";
+import Blogs from "../components/Blogs";
+import HomeSection from "../components/HomeSection";
 import Fee from "../components/System";
 import Layout from "../components/Layout";
 import InfoBtn from "../components/InfoBtn";
 import Carousel from "../components/Carousel";
 
-const images = [
-  "./home1.jpeg",
-  "./home2.jpeg",
-  "./home3.jpeg",
-  "./home1.jpeg",
-  "./home2.jpeg",
-  "./home3.jpeg",
-];
+import styles from "../styles/Home.module.css";
 
-export default function Home({ test, whats }) {
+export default function Home({ info, whats, pickup }) {
   return (
     <Layout title="マハラジャ六本木-六本木のクラブディスコ">
       <div className={styles.top}>
@@ -36,14 +26,14 @@ export default function Home({ test, whats }) {
       </div>
       <main className={styles.container}>
         <HomeSection heading="PICK UP">
-          <Carousel images={images} />
+          <Carousel pickup={pickup} />
         </HomeSection>
         <HomeSection heading="WHAT'S NEW">
-          <Blogs blog={whats}></Blogs>
+          <Blogs blog={whats} types="whats"></Blogs>
         </HomeSection>
 
         <HomeSection heading="EVENT INFO">
-          <Blogs blog={test}></Blogs>
+          <Blogs blog={info} types="info"></Blogs>
         </HomeSection>
 
         <HomeSection heading="SYSTEM">
@@ -74,16 +64,7 @@ export default function Home({ test, whats }) {
         </HomeSection>
 
         <HomeSection heading="INFORMATION">
-          <div className={styles.infoWrapper}>
-            <div className={styles.infoContainer}>
-              <InfoBtn title="Party Plan" image="bottle.png" />
-              <InfoBtn title="Rental" image="rental.png" />
-              <InfoBtn title="Web Store" image="shop.png" />
-              <InfoBtn title="Recruit" image="recruit.png" />
-              <InfoBtn title="Mail Magazine" image="mail.png" />
-              <InfoBtn title="Members Card" image="members.png" />
-            </div>
-          </div>
+          <InfoBtn />
         </HomeSection>
       </main>
     </Layout>
@@ -95,17 +76,23 @@ export const getStaticProps = async () => {
     headers: { "X-API-KEY": process.env.API_KEY },
   };
 
-  const test_data = await fetch("https://maha.microcms.io/api/v1/test", key)
+  const info_data = await fetch("https://maha.microcms.io/api/v1/info", key)
     .then((res) => res.json())
     .catch(() => null);
 
   const whats_data = await fetch("https://maha.microcms.io/api/v1/whats", key)
     .then((res) => res.json())
     .catch(() => null);
+
+  const pickup_data = await fetch("https://maha.microcms.io/api/v1/pickup", key)
+    .then((res) => res.json())
+    .catch(() => null);
+
   return {
     props: {
-      test: test_data.contents,
+      info: info_data.contents,
       whats: whats_data.contents,
+      pickup: pickup_data.contents,
     },
   };
 };
