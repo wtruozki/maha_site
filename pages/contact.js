@@ -1,9 +1,10 @@
 import Layout from "../components/Layout";
+import OtherWrap from "../components/OtherWrap";
 
 const contact = () => {
   return (
-    <Layout>
-      <p>contact Page</p>
+    <Layout title="CONTACT">
+      <OtherWrap heading="contact"></OtherWrap>
     </Layout>
   );
 };

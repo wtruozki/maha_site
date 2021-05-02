@@ -1,0 +1,15 @@
+.container {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.text p {
+  margin-bottom: 1em;
+}
+
+.icon {
+  width: 10px;
+  height: 10px;
+}

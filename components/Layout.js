@@ -90,13 +90,11 @@ const Layout = ({ children, title }) => {
             </div>
 
             <div className={styles.footerContents}>
-              <Link href="/">
+              <Link href="/sitemap" passHref>
                 <a>サイトマップ</a>
               </Link>
-              <Link href="/">
-                <a>お問い合わせ</a>
-              </Link>
-              <Link href="/">
+
+              <Link href="/policy" passHref>
                 <a>サイトポリシー</a>
               </Link>
             </div>
