@@ -1,8 +1,5 @@
-import Link from "next/link";
 import Modal from "react-modal";
-
 import { useState } from "react";
-
 import styles from "./styles/Carousel.module.css";
 import Slider from "react-slick";
 
@@ -54,6 +51,7 @@ const Carousel = ({ pickup }) => {
   };
 
   const [state, setState] = useState(0);
+
   const [isOpen, setIsOpen] = useState(false);
   const [isImg, setIsImg] = useState();
 

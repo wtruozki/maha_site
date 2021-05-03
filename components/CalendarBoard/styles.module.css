@@ -1,0 +1,131 @@
+.container {
+  margin-bottom: 5em;
+  background-color: #fff;
+  color: #000;
+  font-family: YuMincho, "Yu Mincho", serif;
+}
+
+.about {
+  padding: 1em;
+}
+.about h3 {
+  margin-bottom: 8px;
+  font-size: 1.5em;
+}
+.layout {
+  display: flex;
+  align-items: center;
+}
+.time {
+  width: 50vw;
+  justify-self: flex-end;
+  text-align: end;
+}
+
+.date {
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+
+  width: 100%;
+}
+
+.date li {
+  display: flex;
+  justify-content: center;
+  border-left: 1px solid #ccc;
+
+  background-color: #241818;
+  color: #fff;
+}
+
+.about p,
+.date {
+  font-size: 8px;
+}
+.genreContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.genre {
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+.genre span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin-right: 2px;
+}
+
+.colors1 {
+  background-color: cyan;
+}
+
+.colors2 {
+  background-color: magenta;
+}
+
+.colors3 {
+  background-color: #fdf20a;
+}
+
+.colors4 {
+  background-color: #8fc221;
+}
+
+.colors5 {
+  background-color: #531b89;
+}
+
+.colors6 {
+  background-color: #f39805;
+}
+
+.colors7 {
+  background-color: #1f1617;
+}
+
+.element {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  height: 12vw;
+  cursor: pointer;
+}
+
+.element:hover {
+  background-color: #000;
+}
+
+.other {
+  background: #545757;
+}
+.today {
+  background-color: #dbbe8c;
+}
+
+.elements p {
+  font-size: 8px;
+
+  color: #fff;
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro",
+    "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体",
+    "メイリオ", sans-serif;
+}
+.grid {
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+
+@media screen and (min-width: 960px) {
+  .element {
+    height: 15vh;
+  }
+  .about p {
+    font-size: 16px;
+  }
+  .time br {
+    display: none;
+  }
+}

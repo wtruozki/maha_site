@@ -33,8 +33,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -90%);
-
-  z-index: 800;
+  z-index: 80;
   width: 320px;
 }
 .video {
