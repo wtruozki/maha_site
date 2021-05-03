@@ -28,7 +28,7 @@ export default function InfoId({ info }) {
 
 export const getStaticPaths = async () => {
   const key = {
-    headers: { "X-API-KEY": process.env.API_KEY },
+    headers: { "X-API-KEY": process.env.NEXT_PUBLIC_CMS_KEY },
   };
   const data = await fetch("https://maha.microcms.io/api/v1/info", key)
     .then((res) => res.json())
@@ -40,7 +40,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const id = context.params.id;
   const key = {
-    headers: { "X-API-KEY": process.env.API_KEY },
+    headers: { "X-API-KEY": process.env.NEXT_PUBLIC_CMS_KEY },
   };
 
   const info_data = await fetch(

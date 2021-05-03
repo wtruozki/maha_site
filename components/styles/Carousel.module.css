@@ -11,8 +11,32 @@
   opacity: 0.5;
   transform: scale(0.8);
   transition: transform 0.3s;
+  pointer-events: none;
 }
 .active {
   opacity: 1;
   cursor: pointer;
+}
+
+.modal {
+  width: 100%;
+}
+
+.modalText {
+  color: black;
+  padding: 5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+}
+
+.modalContainer img {
+  margin-bottom: 1em;
+  width: 100%;
 }

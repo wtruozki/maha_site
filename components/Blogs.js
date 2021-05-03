@@ -36,7 +36,7 @@ const Blogs = ({ blog, types }) => {
 
               <Link href={`${types}/${blog.id}`}>
                 <div className={styles.container}>
-                  <a className={styles.title}>{blog.title}</a>
+                  <h3 className={styles.title}>{blog.title}</h3>
                   <p>{blog.day}</p>
                 </div>
               </Link>

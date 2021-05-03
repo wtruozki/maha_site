@@ -1,0 +1,9 @@
+.container {
+  background-color: #fff;
+  padding: 1em;
+}
+
+.input:focus {
+  border: 1px solid #ffdc00;
+  outline: 0;
+}

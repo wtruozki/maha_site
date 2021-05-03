@@ -17,7 +17,7 @@ const AccessMap = () => {
   };
 
   return (
-    <LoadScript googleMapsApiKey={process.env.MAP_API_KEY}>
+    <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_MAP_KEY}>
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={17}>
         <InfoWindow position={point}>
           <div className={styles.name}>

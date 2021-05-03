@@ -73,7 +73,7 @@ export default function Home({ info, whats, pickup }) {
 
 export const getStaticProps = async () => {
   const key = {
-    headers: { "X-API-KEY": process.env.API_KEY },
+    headers: { "X-API-KEY": process.env.NEXT_PUBLIC_CMS_KEY },
   };
 
   const info_data = await fetch("https://maha.microcms.io/api/v1/info", key)
