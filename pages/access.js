@@ -13,7 +13,7 @@ const Access = () => {
           <AccessMap />
         </div>
         <div className={styles.text}>
-          <section className="">
+          <section>
             <h3>Addrress</h3>
           </section>
           <p> 〒106-0032 東京都港区六本木6-1-3 六門ビル6F</p>
