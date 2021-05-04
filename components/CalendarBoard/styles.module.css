@@ -94,10 +94,6 @@
   cursor: pointer;
 }
 
-.element:hover {
-  background-color: #000;
-}
-
 .other {
   background: #545757;
 }
@@ -105,6 +101,13 @@
   background-color: #dbbe8c;
 }
 
+.element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
 .elements p {
   font-size: 8px;
 
@@ -112,6 +115,10 @@
   font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro",
     "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体",
     "メイリオ", sans-serif;
+}
+
+.element:hover {
+  box-shadow: 0px 0px 16px -6px rgba(0, 0, 0, 0.6);
 }
 .grid {
   border-left: 1px solid #ccc;

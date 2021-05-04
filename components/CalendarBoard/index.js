@@ -2,9 +2,10 @@ import styles from "./styles.module.css";
 import { GridList } from "@material-ui/core";
 import Modal from "react-modal";
 import { useState } from "react";
-
+import Image from "next/image";
 import dayjs from "dayjs";
 import "dayjs/locale/ja";
+import CarendarItem from "../CalendarItem";
 
 dayjs.locale("ja");
 
@@ -119,7 +120,15 @@ const CalendarBoard = () => {
               <p className={isToday ? styles.today : styles.other}>
                 {c.format("D")}
               </p>
-              <div className={styles.element} onClick={openModal}></div>
+              <div className={styles.element} onClick={openModal}>
+                <Image
+                  src="/schedule.png"
+                  height={120}
+                  width={120}
+                  className={styles.image}
+                />
+                <CarendarItem date={c.format("ddd")} />
+              </div>
             </li>
           );
         })}
