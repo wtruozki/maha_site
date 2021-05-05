@@ -187,9 +187,7 @@ const SideBar = () => {
             <Link href="/">
               <a>サイトマップ</a>
             </Link>
-            <Link href="/">
-              <a>お問い合わせ</a>
-            </Link>
+
             <Link href="/">
               <a>サイトポリシー</a>
             </Link>

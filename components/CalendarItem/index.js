@@ -1,4 +1,3 @@
-import { common } from "@material-ui/core/colors";
 import styles from "./styles.module.css";
 
 const CarendarItem = (date) => {

@@ -8,8 +8,10 @@ import InfoBtn from "../components/InfoBtn";
 import Carousel from "../components/Carousel";
 
 import styles from "../styles/Home.module.css";
+import ConceptComponent from "../components/ConceptConponent";
+import EventCarousel from "../components/EventCarousel";
 
-export default function Home({ info, whats, pickup }) {
+export default function Home({ info, whats, pickup, event }) {
   return (
     <Layout title="マハラジャ六本木-六本木のクラブディスコ">
       <div className={styles.top}>
@@ -31,36 +33,17 @@ export default function Home({ info, whats, pickup }) {
         <HomeSection heading="WHAT'S NEW">
           <Blogs blog={whats} types="whats"></Blogs>
         </HomeSection>
-
         <HomeSection heading="EVENT INFO">
           <Blogs blog={info} types="info"></Blogs>
         </HomeSection>
+
+        <EventCarousel event={event} />
 
         <HomeSection heading="SYSTEM">
           <Fee />
         </HomeSection>
         <HomeSection heading="CONCEPT">
-          <article className={styles.concept}>
-            <h3>洗練された大人の遊び場・・・</h3>
-            洗練されたゴージャスでラグジュアリーな空間。
-            <br />
-            遊びなれた大人たちのワンランク上のクラブ＆ディスコ。
-            <br />
-            <br />
-            2010年に待望の新オープンを果たしたMAHARAJAは club & disco
-            のミックススタイル。
-            <br />
-            <br />
-            オシャレにアフタータイムを楽しむ大人たちの、新しい遊びスタイルを提案します。
-            <br />
-            <br />
-            最新のサウンドシステムやクラブ・ディスコのトップDJたち、
-            ワンランク上のVIPルームなど魅力的な空間を提供。
-            <br />
-            <br />
-            誰もが安心して楽しめるクラブディスコ『MAHARAJA』で
-            特別な空間を心ゆくまでお楽しみ下さい。
-          </article>
+          <ConceptComponent />
         </HomeSection>
 
         <HomeSection heading="INFORMATION">
@@ -88,11 +71,16 @@ export const getStaticProps = async () => {
     .then((res) => res.json())
     .catch(() => null);
 
+  const event_data = await fetch("https://maha.microcms.io/api/v1/event", key)
+    .then((res) => res.json())
+    .catch(() => null);
+
   return {
     props: {
       info: info_data.contents,
       whats: whats_data.contents,
       pickup: pickup_data.contents,
+      event: event_data.contents,
     },
   };
 };
