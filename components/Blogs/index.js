@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./styles/Blog.module.css";
+import styles from "./styles.module.css";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";

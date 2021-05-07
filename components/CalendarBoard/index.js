@@ -9,15 +9,15 @@ import CarendarItem from "../CalendarItem";
 
 dayjs.locale("ja");
 
+const firstDay = dayjs().startOf("month");
+const firstDayIndex = firstDay.day();
+
 const createCalendar = () => {
-  const firstDay = dayjs().startOf("month");
-  const firstDayIndex = firstDay.day();
   return Array(42)
     .fill(0)
     .map((_, i) => {
       const diffFromFirstDay = i - firstDayIndex;
       const day = firstDay.add(diffFromFirstDay, "day");
-
       return day;
     });
 };
@@ -26,7 +26,7 @@ const date = ["SUN", "MON", "TUE", "WED", "THU", "FRY", "SAT"];
 
 const calendar = createCalendar();
 
-const CalendarBoard = () => {
+const CalendarBoard = ({ data }) => {
   const customStyles = {
     overlay: {
       position: "fixed",
@@ -109,11 +109,18 @@ const CalendarBoard = () => {
         ))}
       </GridList>
       <GridList className={styles.grid} cols={7} spacing={0} cellHeight="auto">
-        {calendar.map((c) => {
+        {calendar.map((c, i) => {
           const today = dayjs();
           const compareFormat = "YYYYMMDD";
           const isToday =
             c.format(compareFormat) === today.format(compareFormat);
+
+          let result = "";
+          data.map((val) => {
+            if (c.format("MMDD") === val.m + val.d) {
+              result = val.image;
+            }
+          });
 
           return (
             <li className={styles.elements} key={c.toISOString()}>
@@ -121,13 +128,14 @@ const CalendarBoard = () => {
                 {c.format("D")}
               </p>
               <div className={styles.element} onClick={openModal}>
-                <Image
-                  src="/schedule.png"
-                  height={120}
-                  width={120}
-                  className={styles.image}
-                />
-                <CarendarItem date={c.format("ddd")} />
+                {
+                  <Image
+                    src={result ? result : "/schedule.png"}
+                    width={300}
+                    height={300}
+                    className={result ? styles.resultImg : styles.defaultImage}
+                  />
+                }
               </div>
             </li>
           );

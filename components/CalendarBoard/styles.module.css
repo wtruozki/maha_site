@@ -125,6 +125,29 @@
   border-top: 1px solid #ccc;
 }
 
+.image {
+  width: 100%;
+}
+
+.modalContainer {
+  width: 300px;
+}
+
+.modal {
+  width: 100%;
+}
+
+.modalText {
+  color: #000;
+  text-align: center;
+}
+
+.resultImg {
+  width: 500px;
+}
+.defaultImage {
+  pointer-events: none;
+}
 @media screen and (min-width: 960px) {
   .element {
     height: 15vh;

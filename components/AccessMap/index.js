@@ -1,5 +1,5 @@
 import { GoogleMap, InfoWindow, LoadScript } from "@react-google-maps/api";
-import styles from "./styles/AccessMap.module.css";
+import styles from "./styles.module.css";
 
 const AccessMap = () => {
   const containerStyle = {

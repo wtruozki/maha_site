@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import Blogs from "../components/Blogs";
 import HomeSection from "../components/HomeSection";
 import Fee from "../components/System";
@@ -36,16 +34,13 @@ export default function Home({ info, whats, pickup, event }) {
         <HomeSection heading="EVENT INFO">
           <Blogs blog={info} types="info"></Blogs>
         </HomeSection>
-
         <EventCarousel event={event} />
-
         <HomeSection heading="SYSTEM">
           <Fee />
         </HomeSection>
         <HomeSection heading="CONCEPT">
           <ConceptComponent />
         </HomeSection>
-
         <HomeSection heading="INFORMATION">
           <InfoBtn />
         </HomeSection>
