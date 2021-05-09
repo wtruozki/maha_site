@@ -1,17 +1,14 @@
 import AllWhats from "../components/AllWhats";
 import Layout from "../components/Layout";
 import OtherWrap from "../components/OtherWrap";
-import styles from "../styles/news.module.css";
 
 const News = ({ whats }) => {
   return (
     <Layout>
       <OtherWrap heading="news">
-        <div className={styles.container}>
-          {whats.map((val, i) => (
-            <AllWhats props={val} key={i} />
-          ))}
-        </div>
+        {whats.map((val, i) => (
+          <AllWhats props={val} key={i} />
+        ))}
       </OtherWrap>
     </Layout>
   );
