@@ -22,6 +22,7 @@ const AccessMap = () => {
         <InfoWindow position={point}>
           <div className={styles.name}>
             <p>マハラジャ六本木</p>
+            <p>六門ビルの六階です</p>
           </div>
         </InfoWindow>
       </GoogleMap>
