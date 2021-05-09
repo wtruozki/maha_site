@@ -19,6 +19,21 @@
   margin-bottom: 2em;
   padding: 0 1em;
 }
+.gl {
+  background-color: #8fc221;
+  margin-bottom: 2em;
+  padding: 0 1em;
+}
+.pu {
+  background-color: #531b89;
+  margin-bottom: 2em;
+  padding: 0 1em;
+}
+.ol {
+  background-color: #f39805;
+  margin-bottom: 2em;
+  padding: 0 1em;
+}
 
 @media screen and (min-width: 960px) {
   .img {

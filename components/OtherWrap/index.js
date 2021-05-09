@@ -1,4 +1,4 @@
-import styles from "./styles/OtherWrap.module.css";
+import styles from "./styles.module.css";
 
 const OtherWrap = ({ children, heading }) => {
   let color = styles.none;
@@ -12,6 +12,11 @@ const OtherWrap = ({ children, heading }) => {
     case "access":
       color = styles.ma;
       break;
+
+    case "news":
+      color = styles.gl;
+      break;
+
     default:
       break;
   }

@@ -8,6 +8,7 @@ import Carousel from "../components/Carousel";
 import styles from "../styles/Home.module.css";
 import ConceptComponent from "../components/ConceptConponent";
 import EventCarousel from "../components/EventCarousel";
+import Form from "../components/Form";
 
 export default function Home({ info, whats, pickup, event }) {
   return (
@@ -29,10 +30,10 @@ export default function Home({ info, whats, pickup, event }) {
           <Carousel pickup={pickup} />
         </HomeSection>
         <HomeSection heading="WHAT'S NEW">
-          <Blogs blog={whats} types="whats"></Blogs>
+          <Blogs blog={whats} types="whats" />
         </HomeSection>
         <HomeSection heading="EVENT INFO">
-          <Blogs blog={info} types="info"></Blogs>
+          <Blogs blog={info} types="info" />
         </HomeSection>
         <EventCarousel event={event} />
         <HomeSection heading="SYSTEM">
@@ -43,6 +44,9 @@ export default function Home({ info, whats, pickup, event }) {
         </HomeSection>
         <HomeSection heading="INFORMATION">
           <InfoBtn />
+        </HomeSection>
+        <HomeSection heading="CONTACT">
+          <Form />
         </HomeSection>
       </main>
     </Layout>

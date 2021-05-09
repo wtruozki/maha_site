@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import styles from "./styles/SideBar.module.css";
+import styles from "./styles.module.css";
 
 const SideBar = () => {
   return (

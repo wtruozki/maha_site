@@ -1,4 +1,4 @@
-import styles from "./styles/HomeSection.module.css";
+import styles from "./styles.module.css";
 
 const HomeSection = ({ heading, children }) => {
   return (

@@ -1,4 +1,4 @@
-import styles from "./styles/InfoBtn.module.css";
+import styles from "./styles.module.css";
 import Link from "next/link";
 
 const InfoItem = ({ image, title, linkUrl }) => {

@@ -1,8 +1,11 @@
 import Layout from "../../components/Layout";
 
 import styles from "../../styles/NewsId.module.css";
+import dayjs from "dayjs";
+import "dayjs/locale/ja";
 
 export default function NewsId({ whats }) {
+  const d = dayjs(whats.publishedAt).locale("ja").format("YYYY-MM-DD");
   return (
     <Layout title={whats.title}>
       <main className={styles.container}>
@@ -16,7 +19,7 @@ export default function NewsId({ whats }) {
         </div>
         <div className={styles.tagContainer}>
           <p>{whats.tag}</p>
-          <small>{whats.publishedAt}</small>
+          <small>公開日：{d}</small>
         </div>
       </main>
     </Layout>

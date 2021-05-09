@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./styles/System.module.css";
+import styles from "./styles.module.css";
 
 const Fee = () => {
   return (

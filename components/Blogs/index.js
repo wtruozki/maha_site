@@ -1,15 +1,10 @@
 import Link from "next/link";
 import styles from "./styles.module.css";
 import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
-import timezone from "dayjs/plugin/timezone";
 
-dayjs.extend(utc);
-dayjs.extend(timezone);
+import "dayjs/locale/ja";
 
 const Blogs = ({ blog, types }) => {
-  const date = dayjs.utc(blog.createdAt).tz("Asia/Tokyo").format("YYYY-MM-DD");
-
   return (
     <article>
       <ul className={styles.lists}>
@@ -18,32 +13,34 @@ const Blogs = ({ blog, types }) => {
             <a className={styles.all}>全て表示する</a>
           </Link>
         </div>
-        {blog.slice(0, 2).map((blog) => (
-          <li className={styles.list} key={blog.id}>
-            <time>{date}</time>
-            <div className={styles.titleContainer}>
-              {blog.image ? (
-                <div>
-                  <img
-                    className={styles.titleImg}
-                    src={blog.image.url}
-                    alt={blog.title}
-                  />
-                </div>
-              ) : (
-                ""
-              )}
+        {blog.slice(0, 2).map((blog) => {
+          const d = dayjs(blog.publishedAt).locale("ja").format("YYYY-MM-DD");
+          return (
+            <li className={styles.list} key={blog.id}>
+              <time>{d}</time>
+              <div className={styles.titleContainer}>
+                {blog.image ? (
+                  <div>
+                    <img
+                      className={styles.titleImg}
+                      src={blog.image.url}
+                      alt={blog.title}
+                    />
+                  </div>
+                ) : (
+                  ""
+                )}
 
-              <Link href={`${types}/${blog.id}`}>
-                <div className={styles.container}>
-                  <h3 className={styles.title}>{blog.title}</h3>
-                  <p>{blog.day}</p>
-                </div>
-              </Link>
-            </div>
-            <span className={styles.tag}>{blog.tag}</span>
-          </li>
-        ))}
+                <Link href={`${types}/${blog.id}`}>
+                  <div className={styles.container}>
+                    <h3 className={styles.title}>{blog.title}</h3>
+                  </div>
+                </Link>
+              </div>
+              <span className={styles.tag}>{blog.tag}</span>
+            </li>
+          );
+        })}
       </ul>
     </article>
   );

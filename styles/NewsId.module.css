@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1em 2em;
+  padding: 1em;
 }
 
 .title {
-  font-size: 1.8em;
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
 .tagContainer {
@@ -17,7 +18,7 @@
   color: #000;
   width: 100%;
   background-color: #eee;
-  padding: 2em;
+  padding: 1.5em;
   margin-bottom: 1em;
   border-radius: 6px;
 }

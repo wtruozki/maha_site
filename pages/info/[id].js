@@ -18,9 +18,6 @@ export default function InfoId({ info }) {
             }}
           />
         </div>
-        <div className={styles.tagContainer}>
-          <p>{info.publishedAt}</p>
-        </div>
       </main>
     </Layout>
   );
