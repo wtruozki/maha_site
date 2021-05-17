@@ -1,0 +1,83 @@
+.container {
+  background-color: #fff;
+  color: #666;
+  padding: 1em;
+}
+
+.cancel {
+  margin-bottom: 2em;
+  font-size: 0.8em;
+  color: red;
+}
+
+.heading {
+  line-height: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+  padding: 1em;
+}
+
+.section {
+  margin-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #0ba789;
+}
+
+.section h3 {
+  margin-bottom: 2em;
+  font-size: 1.5em;
+  background-color: #0ba789;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.section:nth-of-type(2) {
+  border: 3px solid #e4047e;
+}
+
+.section:nth-of-type(2) h3 {
+  background-color: #e4047e;
+}
+
+.section a {
+  padding: 1em;
+  margin-bottom: 2em;
+  width: 300px;
+  text-align: center;
+  display: block;
+  border-radius: 7px;
+  background-color: #666;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.section a:hover {
+  background-color: #0ba789;
+}
+.section:nth-of-type(2) a:hover {
+  background-color: #e4047e;
+}
+.partyItem {
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.partyItem p {
+  padding-top: 3em;
+}
+
+.policy {
+  line-height: 2em;
+  font-size: 0.8em;
+}
+
+.policy p {
+  margin-bottom: 2em;
+}

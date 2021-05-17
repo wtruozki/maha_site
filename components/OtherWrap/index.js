@@ -16,6 +16,9 @@ const OtherWrap = ({ children, heading }) => {
     case "news":
       color = styles.gl;
       break;
+    case "PARTY PLAN":
+      color = styles.gl;
+      break;
 
     default:
       break;
