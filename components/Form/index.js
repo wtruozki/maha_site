@@ -45,13 +45,11 @@ const Form = () => {
     message: "",
   });
 
-  //   セレクトバーの表示に関わること
   const changeSelect = (e) => {
     setContact(e.target.value);
     setCategory(e.target.value);
   };
 
-  // フォームの値を取得
   const handleChange = (e) => {
     setContact({ ...contact, [e.target.name]: e.target.value });
     console.log(e.target.value);
@@ -71,7 +69,6 @@ const Form = () => {
       const json = await res.json();
 
       if (json.success) {
-        //成功したらsuccessページに飛ぶ
         Router.push("/success");
       } else {
         setResponse({
@@ -96,7 +93,6 @@ const Form = () => {
         action="https://api.staticforms.xyz/submit"
         onSubmit={handleSubmit}
       >
-        <p className={classes.para}>ご意見ご要望</p>
         <TextField
           type="text"
           id="standard-basic"

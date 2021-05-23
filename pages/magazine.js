@@ -1,9 +1,13 @@
+import Form from "../components/Form";
 import Layout from "../components/Layout";
+import OtherWrap from "../components/OtherWrap";
 
 const Magazine = () => {
   return (
     <Layout>
-      <p>Magazine</p>
+      <OtherWrap heading="MAIL MAGEZINE">
+        <Form />
+      </OtherWrap>
     </Layout>
   );
 };

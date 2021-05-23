@@ -5,7 +5,8 @@ import { useState } from "react";
 import Image from "next/image";
 import dayjs from "dayjs";
 import "dayjs/locale/ja";
-import CarendarItem from "../CalendarItem";
+
+import { schedule } from "../../lib/schedule";
 
 dayjs.locale("ja");
 
@@ -23,10 +24,9 @@ const createCalendar = () => {
 };
 
 const date = ["SUN", "MON", "TUE", "WED", "THU", "FRY", "SAT"];
-
 const calendar = createCalendar();
 
-const CalendarBoard = ({ data }) => {
+const CalendarBoard = () => {
   const customStyles = {
     overlay: {
       position: "fixed",
@@ -116,7 +116,7 @@ const CalendarBoard = ({ data }) => {
             c.format(compareFormat) === today.format(compareFormat);
 
           let result = "";
-          data.map((val) => {
+          schedule.data.map((val) => {
             if (c.format("MMDD") === val.m + val.d) {
               result = val.image;
             }

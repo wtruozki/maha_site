@@ -184,11 +184,11 @@ const SideBar = () => {
             </a>
           </div>
           <div className={styles.footerContents}>
-            <Link href="/">
+            <Link href="/sitemap">
               <a>サイトマップ</a>
             </Link>
 
-            <Link href="/">
+            <Link href="/policy">
               <a>サイトポリシー</a>
             </Link>
           </div>

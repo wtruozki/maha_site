@@ -1,12 +1,12 @@
 import styles from "./styles.module.css";
-
+import Image from "next/image";
 const ConceptComponent = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.imageContainer}>
           <div className={styles.image}>
-            <img src="/home3.png" />
+            <Image src="/home3.png" alt="象" width={1000} height={1000} />
           </div>
           <article className={styles.concept}>
             <h3>洗練された大人の遊び場・・・</h3>

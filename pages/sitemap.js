@@ -1,9 +1,10 @@
 import Layout from "../components/Layout";
+import OtherWrap from "../components/OtherWrap";
 
 const sitemap = () => {
   return (
     <Layout>
-      <div></div>
+      <OtherWrap heading="サイトマップ"></OtherWrap>
     </Layout>
   );
 };
