@@ -12,12 +12,20 @@ const OtherWrap = ({ children, heading }) => {
     case "access":
       color = styles.ma;
       break;
-
     case "news":
       color = styles.gl;
       break;
     case "PARTY PLAN":
-      color = styles.gl;
+      color = styles.ol;
+      break;
+    case "RENTAL HALL":
+      color = styles.pu;
+      break;
+    case "MEMBERS":
+      color = styles.bl;
+      break;
+    case "MAIL MAGEZINE":
+      color = styles.red;
       break;
 
     default:

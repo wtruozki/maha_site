@@ -4,7 +4,7 @@ import OtherWrap from "../components/OtherWrap";
 
 const policy = () => {
   return (
-    <Layout>
+    <Layout title="サイトポリシー">
       <OtherWrap heading="サイトポリシー">
         <p>
           マハラジャ六本木　公式ウェブサイト (以下「本サイト」といいます)

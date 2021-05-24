@@ -17,7 +17,7 @@ const Plan = () => {
   };
 
   return (
-    <Layout>
+    <Layout title="PLAN">
       <OtherWrap heading="PARTY PLAN">
         <div className={styles.container}>
           <p className={styles.cancel}>

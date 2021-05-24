@@ -3,7 +3,7 @@ import OtherWrap from "../components/OtherWrap";
 
 const sitemap = () => {
   return (
-    <Layout>
+    <Layout title="サイトマップ">
       <OtherWrap heading="サイトマップ"></OtherWrap>
     </Layout>
   );

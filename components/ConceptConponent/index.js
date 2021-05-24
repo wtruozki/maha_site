@@ -6,7 +6,7 @@ const ConceptComponent = () => {
       <div className={styles.container}>
         <div className={styles.imageContainer}>
           <div className={styles.image}>
-            <Image src="/home3.png" alt="象" width={1000} height={1000} />
+            <Image src="/home3.png" alt="象" width={500} height={500} />
           </div>
           <article className={styles.concept}>
             <h3>洗練された大人の遊び場・・・</h3>

@@ -4,7 +4,7 @@ import OtherWrap from "../components/OtherWrap";
 
 const Magazine = () => {
   return (
-    <Layout>
+    <Layout title="MAGAZINE">
       <OtherWrap heading="MAIL MAGEZINE">
         <Form />
       </OtherWrap>

@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 
 const Success = () => {
   return (
-    <Layout>
+    <Layout title="ご連絡ありがとうございます。">
       <div className={styles.container}>
         <h3>ご連絡ありがとうございました。</h3>
         <Link href="/">

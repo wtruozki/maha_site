@@ -4,7 +4,7 @@ import OtherWrap from "../components/OtherWrap";
 
 const Members = () => {
   return (
-    <Layout>
+    <Layout title="MEMBERS">
       <OtherWrap heading="MEMBERS">
         <Form />
       </OtherWrap>

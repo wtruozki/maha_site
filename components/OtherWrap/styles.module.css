@@ -6,32 +6,42 @@
 
 .ma {
   background-color: #e4007f;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   padding: 0 1em;
 }
 .cy {
   background-color: #00a0e9;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   padding: 0 1em;
 }
 .ye {
   background-color: #ffdc00;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   padding: 0 1em;
 }
 .gl {
   background-color: #8fc221;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   padding: 0 1em;
 }
 .pu {
   background-color: #531b89;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   padding: 0 1em;
 }
 .ol {
   background-color: #f39805;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  padding: 0 1em;
+}
+.bl {
+  background-color: #0505f3;
+  margin-bottom: 1em;
+  padding: 0 1em;
+}
+.red {
+  background-color: #f30505;
+  margin-bottom: 1em;
   padding: 0 1em;
 }
 

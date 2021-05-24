@@ -1,0 +1,85 @@
+.wrapper {
+  background-color: #ffffff;
+  padding: 1em;
+  color: #333;
+  margin-top: 1em;
+  line-height: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  padding: 1em;
+  text-align: center;
+}
+.container h3 {
+  margin: 0.8em 0;
+  text-align: center;
+}
+
+.section h4,
+.section h5 {
+  text-align: center;
+  padding: 1em;
+}
+
+.container h3 {
+  font-size: 32px;
+}
+.section h4 {
+  font-size: 24px;
+}
+
+.section h5 {
+  font-size: 20px;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 400px;
+  margin-bottom: 3em;
+  border: 2px solid #333;
+  padding: 1em;
+}
+
+.section h4::after,
+.section h4::before {
+  content: " - ";
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8em;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+.imageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.food {
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+}
+
+.attention {
+  text-align: end;
+}
+
+@media screen and (min-width: 960px) {
+  .section {
+    max-width: 600px;
+    width: 600px;
+  }
+  .food {
+    font-size: 18px;
+  }
+}

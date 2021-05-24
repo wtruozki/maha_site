@@ -4,7 +4,7 @@ import OtherWrap from "../components/OtherWrap";
 
 const News = ({ whats }) => {
   return (
-    <Layout>
+    <Layout title="NEWS">
       <OtherWrap heading="news">
         {whats.map((val, i) => (
           <AllWhats props={val} key={i} />

@@ -3,7 +3,7 @@ import OtherWrap from "../components/OtherWrap";
 
 const Recruit = () => {
   return (
-    <Layout>
+    <Layout title="RECRUIT">
       <OtherWrap heading="RECRUIT">
         <section>
           <h3>スタッフ募集!</h3>
