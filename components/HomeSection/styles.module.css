@@ -1,13 +1,12 @@
 .container {
   width: 100%;
-  margin: 20px;
-  padding: 1.2em;
+  padding: 3em 1.2em 5em;
+  overflow: hidden;
 }
 
 .container h2 {
   font-family: YuMincho, "Yu Mincho", serif;
   font-weight: lighter;
-  margin: 0;
 }
 
 .bar {
@@ -15,7 +14,7 @@
   width: 60px;
   height: 3px;
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto 1em;
 }
 
 .heading {

@@ -34,8 +34,8 @@ export default function Home({ info, whats, pickup, event }) {
         </HomeSection>
         <HomeSection heading="EVENT INFO">
           <Blogs blog={info} types="info" />
+          <EventCarousel event={event} />
         </HomeSection>
-        <EventCarousel event={event} />
         <HomeSection heading="SYSTEM">
           <Fee />
         </HomeSection>

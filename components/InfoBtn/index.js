@@ -19,7 +19,6 @@ const InfoBtn = () => {
     <div className={styles.infoContainer}>
       <InfoItem title="Party Plan" image="bottle.png" linkUrl="/plan" />
       <InfoItem title="Rental" image="rental.png" linkUrl="/rental" />
-
       <InfoItem title="Mail Magazine" image="mail.png" linkUrl="/magazine" />
       <InfoItem title="Members Card" image="members.png" linkUrl="/members" />
       <InfoItem title="Recruit" image="recruit.png" linkUrl="/recruit" />

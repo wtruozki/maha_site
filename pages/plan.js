@@ -3,6 +3,7 @@ import OtherWrap from "../components/OtherWrap";
 import styles from "../styles/plan.module.css";
 import Image from "next/image";
 import Slider from "react-slick";
+import { Button } from "@material-ui/core";
 
 const Plan = () => {
   const settings = {
@@ -53,6 +54,7 @@ const Plan = () => {
           </div>
           <section className={styles.section}>
             <h3>VIP PARTY PLAN</h3>
+            <span className={styles.bar}></span>
             <div className={styles.partyItem}>
               <Image
                 src="/vpp.png"
@@ -72,16 +74,18 @@ const Plan = () => {
                 ※フードメニューは人数・季節により変更がございます
               </p>
             </div>
-            <a
-              target="_blank"
+            <Button
               href="https://reserva.be/maharajar/reserve?mode=service_staff&search_evt_no=7beJwzMjQzNwIAAwUBAw"
+              target="_blank"
+              variant="outlined"
             >
               予約画面へ
-            </a>
+            </Button>
           </section>
 
           <section className={styles.section}>
             <h3>LADIES PARTY PLAN</h3>
+            <span className={styles.bar}></span>
             <div className={styles.partyItem}>
               <Image
                 src="/ladies.png"
@@ -102,12 +106,13 @@ const Plan = () => {
                 <br />
               </p>
             </div>
-            <a
-              target="_blank"
+            <Button
               href="https://reserva.be/maharajar/reserve?mode=service_staff&search_evt_no=5aeJwzMjQzNwYAAwYBBA"
+              target="_blank"
+              variant="outlined"
             >
               予約画面へ
-            </a>
+            </Button>
           </section>
 
           <div className={styles.policy}>

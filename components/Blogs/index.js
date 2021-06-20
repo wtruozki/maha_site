@@ -1,12 +1,24 @@
+import { useEffect, useRef } from "react";
+
 import Link from "next/link";
 import styles from "./styles.module.css";
 import dayjs from "dayjs";
 
 import "dayjs/locale/ja";
 
+import { motion, useElementScroll } from "framer-motion";
+import EventCarousel from "../EventCarousel";
+
 const Blogs = ({ blog, types }) => {
+  const ref = useRef();
+  const { scrollYProgress } = useElementScroll(ref);
+  useEffect(() => {
+    scrollYProgress.onChange((latest) => {
+      console.log(latest);
+    });
+  }, []);
   return (
-    <article>
+    <article ref={ref}>
       <ul className={styles.lists}>
         <div className={types === "whats" ? styles.viewAll : styles.none}>
           <Link href="/news">

@@ -8,6 +8,8 @@ import "dayjs/locale/ja";
 
 import { schedule } from "../../lib/schedule";
 
+import { animate, mortion, motion } from "framer-motion";
+
 dayjs.locale("ja");
 
 const firstDay = dayjs().startOf("month");
@@ -148,12 +150,16 @@ const CalendarBoard = () => {
         onRequestClose={closeModal}
         style={customStyles}
       >
-        <div className={styles.modalContainer}>
+        <motion.div
+          className={styles.modalContainer}
+          initial={{ y: "-50px" }}
+          animate={{ y: 0 }}
+        >
           <img src={isImg} alt="test" className={styles.modal} />
           <p className={styles.modalText} onClick={closeModal}>
             close
           </p>
-        </div>
+        </motion.div>
       </Modal>
     </div>
   );

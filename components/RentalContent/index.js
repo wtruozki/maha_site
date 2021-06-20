@@ -290,6 +290,9 @@ const RentalContent = () => {
       </section>
       <section className={styles.container}>
         <h3>FOOD&DRINK MENU</h3>
+        <p className={styles.attention}>
+          <small>『※メニューは一例であり、季節により異なります。』</small>
+        </p>
         <section className={styles.section}>
           <h4>¥5,000PLAN</h4>
           <p className={styles.food}>
@@ -440,9 +443,6 @@ const RentalContent = () => {
             <br />
           </p>
         </section>
-        <p className={styles.attention}>
-          <small>『※メニューは一例であり、季節により異なります。』</small>
-        </p>
       </section>
     </div>
   );

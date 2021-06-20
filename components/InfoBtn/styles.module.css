@@ -2,32 +2,9 @@
   padding: 10px;
   display: flex;
   align-items: center;
-  transition: border 0.2s ease-in, color 0.3s ease-in, letter-spacing 0.5s ease;
-
   font-size: 1.2em;
   border-bottom: 1px solid #fff;
   cursor: pointer;
-}
-
-.container:nth-of-type(2) {
-  transform: translateX(7vw);
-  margin-right: 7vw;
-}
-.container:nth-of-type(3) {
-  transform: translateX(14vw);
-  margin-right: 14vw;
-}
-.container:nth-of-type(4) {
-  transform: translateX(21vw);
-  margin-right: 21vw;
-}
-.container:nth-of-type(5) {
-  transform: translateX(28vw);
-  margin-right: 28vw;
-}
-.container:nth-of-type(6) {
-  transform: translateX(35vw);
-  margin-right: 35vw;
 }
 
 .title {
