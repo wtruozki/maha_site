@@ -2,19 +2,17 @@ import styles from "./styles.module.css";
 import { GridList } from "@material-ui/core";
 import Modal from "react-modal";
 import { useState } from "react";
-import Image from "next/image";
 import dayjs from "dayjs";
 import "dayjs/locale/ja";
 
-import { schedule } from "../../lib/schedule";
+import { getImage } from "../../lib/schedule";
 
-import { animate, mortion, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 dayjs.locale("ja");
 
 const firstDay = dayjs().startOf("month");
 const firstDayIndex = firstDay.day();
-
 const createCalendar = () => {
   return Array(42)
     .fill(0)
@@ -25,6 +23,7 @@ const createCalendar = () => {
     });
 };
 
+const month = dayjs().format("YYYY年 MMMM");
 const date = ["SUN", "MON", "TUE", "WED", "THU", "FRY", "SAT"];
 const calendar = createCalendar();
 
@@ -66,7 +65,7 @@ const CalendarBoard = () => {
   return (
     <div className={styles.container}>
       <section className={styles.about}>
-        <h3> 2021 May </h3>
+        <h3> {month} </h3>
         <div className={styles.layout}>
           <div className={styles.genreContainer}>
             <p className={styles.genre}>
@@ -117,27 +116,20 @@ const CalendarBoard = () => {
           const isToday =
             c.format(compareFormat) === today.format(compareFormat);
 
-          let result = "";
-          schedule.data.map((val) => {
-            if (c.format("MMDD") === val.m + val.d) {
-              result = val.image;
-            }
-          });
-
           return (
             <li className={styles.elements} key={c.toISOString()}>
               <p className={isToday ? styles.today : styles.other}>
                 {c.format("D")}
               </p>
               <div className={styles.element} onClick={openModal}>
-                {
-                  <Image
-                    src={result ? result : "/schedule.png"}
-                    width={300}
-                    height={300}
-                    className={result ? styles.resultImg : styles.defaultImage}
-                  />
-                }
+                <img
+                  src={
+                    c.format("MMD") === "0731"
+                      ? "/home3.png"
+                      : getImage(c.format("ddd"))
+                  }
+                  className={styles.resultImg}
+                />
               </div>
             </li>
           );
